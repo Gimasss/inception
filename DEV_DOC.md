@@ -14,12 +14,12 @@
 
 ### Configuration files needed before first run
 
-The\[Elenca cosa deve esistere prima di lanciare `make`:\]
+The files containing sensitive data have to be added to the folder before launching the program with `make`:
 
--   `srcs/.env` — \[spiega quali variabili contiene, es. DOMAIN\_NAME, MYSQL\_DATABASE, MYSQL\_USER, ecc. — SENZA valori reali qui, solo la lista delle chiavi\]
--   `secrets/*.txt` — \[elenca i 4 file necessari: db\_password.txt, db\_root\_password.txt, wp\_admin\_password.txt, wp\_user\_password.txt\]
+-   `srcs/.env` — Env file contains the data to set up users and environment, define what type of role the user has and what the domain and database are called. 
+-   `secrets/*.txt` — The folder will contain the passwords to access database and WordPress services, divided in the following files: db\_password.txt, db\_root\_password.txt, wp\_admin\_password.txt, wp\_user\_password.txt
 
-\[Spiega che questi file NON sono in git (.gitignore) e vanno creati manualmente\]
+Alternatively, the files can be created from scratch, it is however preferred to use the precompiled ones from the Host machine.
 
 ## Building and launching with Makefile / Docker Compose
 
